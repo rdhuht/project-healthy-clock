@@ -30,17 +30,17 @@
 function thingsAndServo () {
     timeanddate.numericTime(function (hour, minute, second, month, day, year) {
         if (hour == 6 && minute == 30) {
-            pins.servoWritePin(AnalogPin.P16, 15)
+            pins.servoWritePin(AnalogPin.P15, 15)
         } else if (hour == 7 && minute == 0) {
-            pins.servoWritePin(AnalogPin.P16, 45)
+            pins.servoWritePin(AnalogPin.P15, 45)
         } else if (hour == 8 && minute == 0) {
-            pins.servoWritePin(AnalogPin.P16, 75)
+            pins.servoWritePin(AnalogPin.P15, 75)
         } else if (hour == 12 && minute == 0) {
-            pins.servoWritePin(AnalogPin.P16, 105)
+            pins.servoWritePin(AnalogPin.P15, 105)
         } else if (hour == 18 && minute == 0) {
-            pins.servoWritePin(AnalogPin.P16, 135)
+            pins.servoWritePin(AnalogPin.P15, 135)
         } else if (hour == 21 && minute == 0) {
-            pins.servoWritePin(AnalogPin.P16, 165)
+            pins.servoWritePin(AnalogPin.P15, 165)
         }
     })
 }
