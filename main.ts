@@ -28,7 +28,24 @@
  * 165
  */
 function thingsAndServo () {
-	
+    timeanddate.numericTime(function (hour, minute, second, month, day, year) {
+        if (hour == 6 && (minute == 30 && second == 1)) {
+            music.playMelody("- E - G - E - - ", 120)
+            pins.servoWritePin(AnalogPin.P15, 15)
+        } else if (hour == 7 && (minute == 10 && second == 1)) {
+            pins.servoWritePin(AnalogPin.P15, 45)
+        } else if (hour == 8 && (minute == 0 && second == 1)) {
+            pins.servoWritePin(AnalogPin.P15, 75)
+        } else if (hour == 12 && (minute == 0 && second == 1)) {
+            pins.servoWritePin(AnalogPin.P15, 105)
+        } else if (hour == 18 && (minute == 0 && second == 1)) {
+            pins.servoWritePin(AnalogPin.P15, 135)
+        } else if (hour == 21 && (minute == 0 && second == 1)) {
+            pins.servoWritePin(AnalogPin.P15, 165)
+        } else {
+            music.stopMelody(MelodyStopOptions.All)
+        }
+    })
 }
 function blink () {
     if (timeanddate.secondsSinceReset() % 2 == 0) {
@@ -83,5 +100,5 @@ basic.forever(function () {
     })
 })
 basic.forever(function () {
-	
+    thingsAndServo()
 })
